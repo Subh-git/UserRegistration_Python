@@ -44,6 +44,15 @@ class Test_UserRegistration(unittest.TestCase):
         self.assertEqual(UserRegistrationForm.mobile_number("8529637413"),"Invalid")
         self.assertEqual(UserRegistrationForm.mobile_number("910 8529637413"),"Valid")
 
+    def test_password(self):
+        '''
+        This method is to test the validity of the password. It checks whether the called function returns valid or invalid.
+        '''
+        self.assertEqual(UserRegistrationForm.password("Abchou123@"),"Valid")
+        self.assertEqual(UserRegistrationForm.password("shjkioertp"),"Invalid")
+        self.assertEqual(UserRegistrationForm.password("aQo@334"),"Invalid")
+        
+
 
 
 
