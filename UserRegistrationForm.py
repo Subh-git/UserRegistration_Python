@@ -39,3 +39,20 @@ def last_name(string):
         return "Valid"
     else:
         return "Invalid"
+
+
+def email_name(string):
+    '''
+    Description:
+        This method is used to validate the email entered.
+    Parameter:
+        This takes a string as parameter.
+    Return:
+        This returns whether the string is Valid or Invalid.
+    '''
+    reg = "^[a-zA-Z0-9]+[+-._]?[a-zA-Z0-9]*[+-._]?[a-zA-Z0-9]+@[a-zA-Z0-9]+[.]{1}[a-zA-Z]{2,3}[.]?[a-zA-Z]{0,3}$"
+
+    if (re.match(reg,string)):
+        return "Valid"
+    else:
+        return "Invalid"
