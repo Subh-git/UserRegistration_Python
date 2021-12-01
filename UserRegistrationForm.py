@@ -23,3 +23,19 @@ def first_name(string):
     else:
         return "Invalid"
 
+
+def last_name(string):
+    '''
+    Description:
+        This method is used to validate the last name entered.
+    Parameter:
+        This takes a string as parameter.
+    Return:
+        This returns whether the string is Valid or Invalid.
+    '''
+    reg = "^[A-Z]{1}[a-zA-Z]{2,}$"
+    
+    if (re.match(reg,string)):
+        return "Valid"
+    else:
+        return "Invalid"
