@@ -56,3 +56,19 @@ def email_name(string):
         return "Valid"
     else:
         return "Invalid"
+
+def mobile_number(string):
+    '''
+    Description:
+        This method is used to validate the mobile number entered.
+    Parameter:
+        This takes a string as parameter.
+    Return:
+        This returns whether the string is Valid or Invalid.
+    '''
+    reg = "^([0-9]{2}[ ][0-9]{10})|([0-9]{3}[ ][0-9]{10})$"
+
+    if (re.match(reg,string)):
+        return "Valid"
+    else:
+        return "Invalid"
