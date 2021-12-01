@@ -16,7 +16,11 @@ class Test_UserRegistration(unittest.TestCase):
         self.assertEqual(UserRegistrationForm.first_name('Ro'),'Invalid')
         self.assertEqual(UserRegistrationForm.first_name('Subhadeep Bhatta'),'Invalid')
 
-    
+    def test_last_name(self):
+        self.assertEqual(UserRegistrationForm.last_name("Bhattacharjee"),"Valid")
+        self.assertEqual(UserRegistrationForm.last_name("Gaikwad"),"Valid")
+        self.assertEqual(UserRegistrationForm.last_name("Bh"),"Invalid")
+        self.assertEqual(UserRegistrationForm.last_name("bhattacharjee"),"Invalid")
 
 
 
