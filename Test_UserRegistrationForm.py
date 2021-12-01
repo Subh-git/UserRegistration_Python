@@ -6,6 +6,7 @@
 '''
 import unittest
 import UserRegistrationForm
+import EmailSamples
 
 class Test_UserRegistration(unittest.TestCase):
 
@@ -51,8 +52,26 @@ class Test_UserRegistration(unittest.TestCase):
         self.assertEqual(UserRegistrationForm.password("Abchou123@"),"Valid")
         self.assertEqual(UserRegistrationForm.password("shjkioertp"),"Invalid")
         self.assertEqual(UserRegistrationForm.password("aQo@334"),"Invalid")
-        
 
+
+    #the below tests are for testing all the valid and invalid testing mails.  
+    def test_all_valid_emails(self):
+        '''
+        This method is to test the validity of all the valid email samples. 
+        It checks whether the called function returns valid or invalid.
+        '''
+        string = "Valid"
+        for i in EmailSamples.ValidEmails:
+            self.assertEqual(UserRegistrationForm.email_name(i),string)
+
+    def test_all_invalid_emails(self):
+        '''
+        This method is to test the validity of all the invalid email samples. 
+        It checks whether the called function returns valid or invalid.
+        '''
+        string = "Invalid"
+        for i in EmailSamples.InValidEmails:
+            self.assertEqual(UserRegistrationForm.email_name(i),string)
 
 
 
