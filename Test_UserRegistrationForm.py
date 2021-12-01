@@ -36,6 +36,15 @@ class Test_UserRegistration(unittest.TestCase):
         self.assertEqual(UserRegistrationForm.email_name("subhadeep.com"),"Invalid")
         self.assertEqual(UserRegistrationForm.email_name("Subhadeep@gmail"),"Invalid")
 
+    def test_mobile(self):
+        '''
+        This method is to test the validity of the mobile number. It checks whether the called function returns valid or invalid.
+        '''
+        self.assertEqual(UserRegistrationForm.mobile_number("91 8529637413"),"Valid")
+        self.assertEqual(UserRegistrationForm.mobile_number("8529637413"),"Invalid")
+        self.assertEqual(UserRegistrationForm.mobile_number("910 8529637413"),"Valid")
+
+
 
 
 if __name__ == "__main__":
