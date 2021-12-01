@@ -72,3 +72,19 @@ def mobile_number(string):
         return "Valid"
     else:
         return "Invalid"
+
+def password(string):
+    '''
+    Description:
+        This method is used to validate the password entered.
+    Parameter:
+        This takes a string as parameter.
+    Return:
+        This returns whether the string is Valid or Invalid.
+    '''
+    reg = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).{8,}$"
+
+    if (re.match(reg,string)):
+        return "Valid"
+    else:
+        return "Invalid"
