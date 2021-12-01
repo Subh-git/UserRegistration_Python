@@ -33,7 +33,7 @@ class Test_UserRegistration(unittest.TestCase):
         This method is to test the validity of the email address. It checks whether the called function returns valid or invalid.
         '''
         self.assertEqual(UserRegistrationForm.email_name("Subhadeep@gmail.com"),"Valid")
-        self.assertEqual(UserRegistrationForm.email_name("Subhadeep.com"),"Invalid")
+        self.assertEqual(UserRegistrationForm.email_name("subhadeep.com"),"Invalid")
         self.assertEqual(UserRegistrationForm.email_name("Subhadeep@gmail"),"Invalid")
 
 
