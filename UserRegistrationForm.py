@@ -1,6 +1,6 @@
 '''	
 	@Author: Subhadeep Bhattacharjee
-	@Date: 2021-12-01 17:00
+	@Date: 2021-12-01 17:05
 	@Title : User Registration Form
 	
 '''
